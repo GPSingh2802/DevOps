@@ -1,0 +1,90 @@
+GIT Commands
+
+Git installation (sudo yum install git or sudo apt-get install git)
+git config
+git config — global.name “Name”
+git config — global.email “name@gmail.com”
+git config — List
+git init
+touch text1.txt
+git add (stage or track the files)
+git commit -m “Message”
+git status
+git log (—online) (reflog)
+git clone
+echo “message” >> text1.txt
+cat text1.txt
+git clone https://github.com/GPSingh2802/DevOps.git
+git clone edureka@192.168.56.102:/home/edureka/git-repo
+pwd
+
+git pull origin
+git push origin
+git diff
+
+git tools::
+Sourcetree
+Git kraken
+
+git Ignore .git/info/exclude
+touch .gitignore
+
+Merge conflicts - manually
+
+git tag <tag name> <Commit ID>
+
+
+Branching concepts::
+git branch
+git branch <branchname>  (Create new branch)
+git checkout <branchname> (Switching to the new branch)
+git merge <branchname> (To merge with Current Branch)
+git rebase
+git remote -v
+git remote add <name> <path>
+git pull = git fetch + git merge
+
+
+git revert HEAD (Does not alter commit history)
+git reset
+
+git stash
+
+=========================================
+git log
+git log --oneline (git reflog)
+git diff
+git branch
+git checkout
+git ignore
+Merge conflicts
+git tag
+git checkout tagname/commitid (to go back to check a particular tag or commit)
+Branching concepts
+git branch newbranch (to create new branch)
+git merge branchname (to merge with current branch)
+[git pull = git fetch + git merge]
+git remote
+git rebase (https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+git revert HEAD (git revert HEAD~3)
+git reset --hard commitid (Example: git reset --hard 544d354)
+
+https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting
+git stash
+
+
+"Commits are cheap in Git. Do it as often as possible"
+
+=======================================================
+Why VCS/SCM?
+1. Versioning
+2. Collaboration
+3. Due diligence
+
+DVCS vs CVCS
+1. users can work offline
+2. Multiple developers can contribute at the same time.
+3. You don't need a dedicated server
+
+Centralized VCS examples: SVN, Accurev, TFS, Perforce CVS
+Distributed VCS examples: GIT, Mercurial
