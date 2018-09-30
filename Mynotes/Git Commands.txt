@@ -7,7 +7,7 @@ git config — global.email “name@gmail.com”
 git config — List
 git init
 touch text1.txt
-git add (stage or track the files)
+git add (stage or track the files)  (Git add .)
 git commit -m “Message”
 git status
 git log (—online) (reflog)
