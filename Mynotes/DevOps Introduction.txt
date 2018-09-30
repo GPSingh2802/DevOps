@@ -1,0 +1,62 @@
+DevOps Course
+
+#DevOps Prerequisites
+1. Linux (Fundamental)
+2. Overall understanding of Software delivery process
+3. ready to learn new things at quick pace
+
+==============================
+[Keywords to read and familiarise yourself with]
+
+Lead time
+MTTR - Mean time to Recovery
+Silos
+Infrastructure-as-Code
+Continuous Integration
+Continuous delivery
+Continuous Deployment
+Desired state configuration
+2-Pizza teams
+state of DevOps report
+
+==============================
+[DevOps Tool Chain]
+
+SCM/VCS - GIT, SVN, Accurev, Mercurial, TFS
+Continuous Integration - Jenkins, Teamcity, Travis CI
+Configuration management - Puppet, Chef, Ansible
+Container - Docker, Mesos, COreOS, Swarm, Kuberenetes, Windows Containers, ECS,
+Monitoring - Nagios, Solarwinds, Zabbix, Dyntrace
+
+==============================
+[DevOps on Cloud]
+
+AWS - Deployment services
+Azure - Visual Studio Team services
+
+==============================
+[Recommended DevOps Blogs]
+
+aws.amazon.com/devops/
+netflix
+rackspace
+etsy
+devops.com
+dzone devops zone
+chef.io blogs
+puppetlabs
+
+=============================
+[Books and people to follow]
+
+The phoenix project [By Gene Kim]
+The DevOps handbook [By Gene Kim]
+
+==============================
+[DevOps experts globally]
+
+Gene Kim
+Adam Jacob
+Martin Fowler
+Patrick Debois
+Jez Humble
