@@ -1,0 +1,40 @@
+=====================================================================
+# API - Application Programming Interface
+# Code written by someone else and can be used in my Application
+# e.g Makemytrip Website
+# Some APIs are free and other are paid
+# API key (Have to take permission - to stop any malicious activity)
+
+=====================================================================
+# HTML - Hyper Text Markup language
+# Use Tags which has special meaning for Browser
+# Not only transfer data but also send data representation
+# CSS and JavaScript
+# representation of data is important only when end user is Human
+
+=====================================================================
+# When no need to send data representation - Between two Application
+# Plain Text, XML, JSON
+# Plain text : Tough to read and Understand
+# XML : eXtensible Markup language
+  - Client and Server should have agreement on the meaning of Tags
+  - XML has only Data
+  - Can be used for data Storage
+# XML reading mechanism is knows as XML Parser
+
+# JSON : Java Script Object Notification
+# no tags, only name and values
+
+====================================================================
+
+# REST APIs : REpresentational State Transfer
+# Server do not send Object to Client but state of the Object
+
+# Client to Server - Request (Rest API endpoint URl + API Method + Parameters)
+# Server to Client - Response (Resource - REST, XML-RPC, SOAP, JSON Serialized PHP)
+
+====================================================================
+# HTTP - Hyper Text Transfer Protocol
+# HTTP Method - GET, POST, PUT and Delete
+# Client to Server - Request(URL- Protocol + Host + Resource)
+# Server to Client - Response (Resource - HTML, Image, XML, Jason)

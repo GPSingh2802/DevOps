@@ -1,0 +1,32 @@
+# This is my first YAML file
+# Data Serialization language
+# Store information about differnt things
+# Can be used fo define key value pairs - Variable, list objects
+# Simlier to JSON (Java Script Objects Notification)
+# Huge emphasis on readibility and user friendliness
+# .yml or .YAML
+
+Person: # Object and below are data type (Indented)
+ name : "Ghanendra P Singh" #String
+ Occupation : 'IT Professional' #String with Single quote
+ Age : 40 #Numbers
+ Score : 9.9 #Floating Point Numbers
+ Favorite number : 1e+ 10 #exponential Numbers
+ Male : True #Boolian
+ Birthday : 28-02-1978 #Date
+ Flaws : Null
+ Hobbies : #List style 1
+   - Biking
+   - Running
+Movies : ["Dark Night", "ET"] # List Style 2
+Friends :
+  - Name : Ninan Paulose
+  - Age : 35
+  - {name: "Raman Singh", Age: 41} #Complex List
+
+ Person:
+   name : &name "Pooja" #Anchoring
+   age : !! Float 26 # 26.0 Force differnt data-type
+   Score : !!str 9.9 # "9.9"
+
+ID : *name #Accessing Anchor
