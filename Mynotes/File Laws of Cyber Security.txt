@@ -1,0 +1,8 @@
+
+# File Laws of Cyber Security
+
+1. If there is vulnerability, it will be exploited.
+2. Everything is vulnerable in some way
+3. Human trust when you shouldn’t
+4. With innovation comes opportunity for exploitation
+5. When in doubt, see law number
