@@ -39,7 +39,8 @@ Function               Resources                     Resources                  
 #Commands
 ==========================================
  - Ansible --Version
- - cat /etc/ansible/ansible.cfg (File with high level Ansible configuration)
- - cat /etc/ansible/hosts (Inventory File)
- - Ansible -m ping all (m is for modules)
- - Ansinle -m ping 
+ - cat /etc/ansible/ansible.cfg (#File with high level Ansible configuration)
+ - cat /etc/ansible/hosts (#Inventory File)
+ - Ansible -m ping all (# m is for modules)
+ - Ansible -m ping "node group" (for particular group)
+ - Ansible "Node group" -m copy -a "src=test.txt dest=/temp/test.txt"
