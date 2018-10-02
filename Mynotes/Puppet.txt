@@ -1,4 +1,5 @@
 
+# puppet
 # Infrastructure as a Code
 # Automation of IT Operations (Build, Deploy and Manage)
  - Faster, Better, Cheaper (Time to Market, No Configuration Drift(reliable), Efficient)
@@ -11,10 +12,11 @@
 # CM tools are Idempotence/Idempotent (Makes changes only if require changes vs Scripts)
 # DSC => Desired State Configuration
 
-
 # Puppet: Pull/Master Slave Architecture/Agent Based
 # Chef: Pull/Server Node/Agent based
 # Ansible - Push/Agentless
+
+# Puppet and Chef written in Ruby
 
 # Node to Pupper Server - facts (Current State)
 # Puppet Server to Nodes - Catalogue (Based on Facts, Server prepare Catalogue for Desired State)
@@ -23,13 +25,13 @@
 
 # **Port TCP8140 should be listening on Puppet Master
 
-Traditional languages        Puppet                        Chef
-Packages                     Modules                       Cookbooks
-Codefiles                    Manifest(.pp)                 Recipes
-Function                     Resources                     Resources
-					                   facter facts (node)           OHAI Attributes (node)
-                             forge.puppet.com              chef supermarket
-                             (for community Modules)       (for community cookbooks)
+Traditional languages  Puppet                        Chef                         Ansible
+Packages               Modules                       Cookbooks                    Roles
+Codefiles              Manifest(.pp)                 Recipes(.rb)                 Playbook(.YAML)
+Function               Resources                     Resources                    Modules
+					             facter (facts) (node)         OHAI (Attributes) (node)     Setup (facts)
+                       forge.puppet.com              chef supermarket             Galaxy.Ansible.com
+                       (for community Modules)       (for community cookbooks)    (for community Roles)
 
 
  Installation Steps: Puppet Master
@@ -68,8 +70,8 @@ Function                     Resources                     Resources
 
 # Manifest file -> Resources -> Attributes
 # Manifest files -> Classes-> Resources (Classes - Container for different Resources)
-# Puppet Modules (Forge.puppet.com)
 
+# Puppet Modules (Forge.puppet.com)
 # Puppet Resources https://puppet.com/docs/puppet/5.5/type.html
 
 # site.pp vs init.pp

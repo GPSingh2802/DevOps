@@ -1,0 +1,45 @@
+
+# Ansible
+# Infrastructure as a Code
+# Automation of IT Operations (Build, Deploy and Manage)
+ - Faster, Better, Cheaper (Time to Market, No Configuration Drift(reliable), Efficient)
+ - Configuration Drift
+ - CM tools DSLs (Domain Specific Language) easier than writing Scripts
+ - CM tools have pre-defined workflows
+
+# Ansible - Push/Agentless
+# Ansible written in Python
+
+# Push vs Pull
+==========================================
+Push is fully syncronse vs Pull is Scalable
+
+# Why Ansible
+==========================================
+- Simple: Use YAML
+- Agent-less: SSH and WinRM (TCP5985/5986)
+- Accessible:
+- Powerful:
+
+# Installation
+==========================================
+# Sudo yum Install python python-devel python-pip ansible
+# Password-less Authentication
+
+#
+
+Traditional languages  Puppet                        Chef                         Ansible
+Packages               Modules                       Cookbooks                    Roles
+Codefiles              Manifest(.pp)                 Recipes(.rb)                 Playbook(.YAML)
+Function               Resources                     Resources                    Modules
+					             facter (facts) (node)         OHAI (Attributes) (node)     Setup (facts)
+                       forge.puppet.com              chef supermarket             Galaxy.Ansible.com
+                       (for community Modules)       (for community cookbooks)    (for community Roles)
+
+#Commands
+==========================================
+ - Ansible --Version
+ - cat /etc/ansible/ansible.cfg (File with high level Ansible configuration)
+ - cat /etc/ansible/hosts (Inventory File)
+ - Ansible -m ping all (m is for modules)
+ - Ansinle -m ping 
