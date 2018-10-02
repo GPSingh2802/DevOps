@@ -19,7 +19,7 @@ Push is fully syncronse vs Pull is Scalable
 - Simple: Use YAML
 - Agent-less: SSH and WinRM (TCP5985/5986)
 - Accessible:
-- Powerful:
+- Powerful: Ad-hoc Commands
 
 # Installation
 ==========================================
@@ -43,4 +43,33 @@ Function               Resources                     Resources                  
  - cat /etc/ansible/hosts (#Inventory File)
  - Ansible -m ping all (# m is for modules)
  - Ansible -m ping "node group" (for particular group)
- - Ansible "Node group" -m copy -a "src=test.txt dest=/temp/test.txt"
+ - Ansible "Node group" -m copy -a "src=test.txt dest=/temp/test.txt" (#Adhoc Commands)
+ - Ansible-Playbook "Playbook name"
+
+
+ # Playbook (Can have multiple plays)
+ ===========================================
+ ---                                    # Playbook starts with three dash
+ - Hosts: nodes                         # Play starts with hosts the play is supposed to be executed
+   remote_users: edureka                #
+   become: yes                          # become diffent user than the one logged in. Privilege escalation
+   become_method: sudo
+   connection: SSH
+   gather_facts: yes
+   task:                                # Task. A play can have multiple tasks, executed in order
+   - name: install tree Commands
+     yum:
+      name: tree
+      state: latest
+
+  - Hosts: nodes
+  remote_users: edureka
+  become: yes (#to become Sudo)
+  become_method: sudo
+  connection: SSH
+  gather_facts: yes
+  task:
+  - name: install telnet Commands
+  yum:
+  name: telnet
+  state: latest
