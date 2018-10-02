@@ -23,6 +23,8 @@
 
 
 
+
+
   self healing
   Idempotence / Idempotent
 
