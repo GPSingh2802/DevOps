@@ -8,6 +8,8 @@
 
 # DSLs are Declarative
 # Declarative (What do you want to do/Achieve, you don't tell how to do it.) vs Imperative (Java, C, Python)
+# CM tools are Idempotence/Idempotent (Makes changes only if require changes vs Scripts)
+# DSC => Desired State Configuration
 
 
 # Puppet: Pull/Master Slave Architecture/Agent Based
@@ -21,65 +23,85 @@
 
 # **Port TCP8140 should be listening on Puppet Master
 
+Traditional languages        Puppet                        Chef
+Packages                     Modules                       Cookbooks
+Codefiles                    Manifest(.pp)                 Recipes
+Function                     Resources                     Resources
+					                   facter facts (node)           OHAI Attributes (node)
+                             forge.puppet.com              chef supermarket
+                             (for community Modules)       (for community cookbooks)
 
 
+ Installation Steps: Puppet Master
+ =========================================
+ curl -O https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+ sudo dpkg -i puppetlabs-release-pc1-xenial.deb
+ sudo apt-get update
+ sudo apt-get install puppetserver
+ sudo vi /etc/default/puppetserver
+ ufw allow 8140
+ sudo systemctl start puppetserver
+ sudo systemctl status puppetserver
+ sudo systemctl enable puppetserver
 
+ =========================================
+ Installation Steps: Puppet Slave
+ =========================================
+ wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+ sudo dpkg -i puppetlabs-release-pc1-xenial.deb
+ sudo apt-get install puppet-agent
+ sudo systemctl start puppet
+ sudo systemctl enable puppet
 
-  self healing
-  Idempotence / Idempotent
+ # Installation Steps: Signing Certificates
+ =========================================
+ Following command will list all certificates to be signed on Master:
+ sudo /opt/puppetlabs/bin/puppet cert list
+ Following command will sign all certificates on Master:
+ sudo /opt/puppetlabs/bin/puppet cert sign --all
+
+#commands
+==========================================
+- facter
+- cat Puppet.conf
+- puppet agent -t
+
+# Manifest file -> Resources -> Attributes
+# Manifest files -> Classes-> Resources (Classes - Container for different Resources)
+# Puppet Modules (Forge.puppet.com)
+
+# Puppet Resources https://puppet.com/docs/puppet/5.5/type.html
+
+# site.pp vs init.pp
+==========================================
+## site.pp => used for site wide configuration settings
+##Location of site.pp
+/etc/puppet/manifests/site.pp
+
+## init.pp => used for module specific configuration settings
+##Location of init.pp
+/etc/puppet/modules/sk12k-ntp/manifests/init.pp
+
+# puppet module commands
+=========================================
+puppet module install modulename
+puppet module list
+puppet module upgrage modulename
+puppet module uninstall modulename
 
 References:
+==========================================
 https://www.digitalocean.com/community/tutorials/an-introduction-to-configuration-management
 https://www.netapp.com/us/info/what-is-configuration-management.aspx
 https://puppet.com/solutions/configuration-management
-=========================================
-Keywords:
-DSC => Desired State Configuration
+https://www.edureka.co/blog/what-is-puppet/
+https://www.edureka.co/blog/tag/puppet/
+https://www.edureka.co/blog/chef-vs-puppet-vs-ansible-vs-saltstack/
+https://docs.puppet.com/
+https://www.puppetcookbook.com/
+http://fullstack-puppet-docs.readthedocs.io/en/latest/puppet_manifests.html
+http://www.bogotobogo.com/DevOps/Puppet/puppet_basics_of_code_terminology.php
 
-
-Providers
-
-=========================================
-
-=========================================
-Traditional lanaguages      Puppet                        Chef
-Packages                            Modules                       Cookbooks
-Codefiles                            Manifest (.pp)                Recipes
-Function                              Resources                     Resources
-
-					   facter                             OHAI
-                                            facts (node)                  Attributes (node)
-                                             forge.puppet.com              chef supermarket
-                                        (for community Modules)       (for community cookbooks)
-
-
-=========================================
-Installation Steps: Puppet Master
-=========================================
-curl -O https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-sudo dpkg -i puppetlabs-release-pc1-xenial.deb
-sudo apt-get update
-sudo apt-get install puppetserver
-sudo vi /etc/default/puppetserver
-ufw allow 8140
-sudo systemctl start puppetserver
-sudo systemctl status puppetserver
-sudo systemctl enable puppetserver
-=========================================
-Installation Steps: Puppet Slave
-=========================================
-wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-sudo dpkg -i puppetlabs-release-pc1-xenial.deb
-sudo apt-get install puppet-agent
-sudo systemctl start puppet
-sudo systemctl enable puppet
-=========================================
-Installation Steps: Signing Certificates
-=========================================
-Following command will list all certificates to be signed on Master:
-sudo /opt/puppetlabs/bin/puppet cert list
-Following command will sign all certificates on Master:
-sudo /opt/puppetlabs/bin/puppet cert sign --all
 ########################################
 # Your first puppet manifest file
 ########################################
@@ -103,6 +125,8 @@ node default {
         password => '123456'
     }
 }
+
+
 ########################################
 #Meta Parameters
 ########################################
@@ -123,6 +147,8 @@ service { 'sshd':
   subscribe => File['/etc/ssh/sshd_config']
 }
 ## source => puppet master =>/etc/puppet/modules/sshd/files/sshd_config
+
+
 ########################################
 #Chained Arrows
 ########################################
@@ -138,29 +164,3 @@ service { 'sshd':
   ensure => 'running',
   enable => true,
 }
-########################################
-site.pp vs init.pp
-########################################
-## site.pp => used for site wide configuration settings
-##Location of site.pp
-/etc/puppet/manifests/site.pp
-## init.pp => used for module specific configuration settings
-##Location of init.pp
-/etc/puppet/modules/sk12k-ntp/manifests/init.pp
-########################################
-puppet module commands
-########################################
-puppet module install modulename
-puppet module list
-puppet module upgrage modulename
-puppet module uninstall modulename
-########################################
-# Further references
-########################################
-https://www.edureka.co/blog/what-is-puppet/
-https://www.edureka.co/blog/tag/puppet/
-https://www.edureka.co/blog/chef-vs-puppet-vs-ansible-vs-saltstack/
-https://docs.puppet.com/
-https://www.puppetcookbook.com/
-http://fullstack-puppet-docs.readthedocs.io/en/latest/puppet_manifests.html
-http://www.bogotobogo.com/DevOps/Puppet/puppet_basics_of_code_terminology.php
