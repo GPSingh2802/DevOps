@@ -1,15 +1,28 @@
 
+# Infrastructure as a Code
+# Automation of IT Operations (Build, Deploy and Manage)
+ - Faster, Better, Cheaper (Time to Market, No Configuration Drift(reliable), Efficient)
+ - Configuration Drift
+ - CM tools DSLs (Domain Specific Language) easier than writing Scripts
+ - CM tools have pre-defined workflows
+
+# DSLs are Declarative
+# Declarative (What do you want to do/Achieve, you don't tell how to do it.) vs Imperative (Java, C, Python)
 
 
-=========================================
-Puppet Class Notes
-=========================================
-**Port 8140 should be listening on Puppet Master
+# Puppet: Pull/Master Slave Architecture/Agent Based
+# Chef: Pull/Server Node/Agent based
+# Ansible - Push/Agentless
 
-What is Configuration Management?
-  Not to have Configuration Drift
-  It makes you proactive rather than reactive
-  Prevents "Out-of-band" changes
+# Node to Pupper Server - facts (Current State)
+# Puppet Server to Nodes - Catalogue (Based on Facts, Server prepare Catalogue for Desired State)
+# Node to Pupper Server - report sent back
+# NodeObject (file which contains all the "facts" about a specific node)
+
+# **Port TCP8140 should be listening on Puppet Master
+
+
+
   self healing
   Idempotence / Idempotent
 
@@ -21,21 +34,11 @@ https://puppet.com/solutions/configuration-management
 Keywords:
 DSC => Desired State Configuration
 
-DSL => Domain Specific Language (Declarative**)
-Puppet DSL
-Chef DSL
-Ansible DSL
-
-** Declarative (What do you want to do/Achieve, you don't tell how to do it.) vs Imperative (Java, C, Python)
 
 Providers
-NodeObject (file which contains all the "facts" about a specific node)
+
 =========================================
-Puppet Pull/Master Slave / Agent Based
-Chef Pull/Server Node / Agent based
-Ansible - Push / Agentless
-Puppet  => Node /puppet Agent/Puppet-Slave/
-Chef    => Node /Chef client / Chef node
+
 =========================================
 Traditional lanaguages      Puppet                        Chef
 Packages                            Modules                       Cookbooks
@@ -46,15 +49,8 @@ Function                              Resources                     Resources
                                             facts (node)                  Attributes (node)
                                              forge.puppet.com              chef supermarket
                                         (for community Modules)       (for community cookbooks)
-=========================================
-Puppet works on SSL certificate based authentication
-Chef works on pem file based authentication
-Ansible is ssh
-=========================================
-Puppet => Master/Slave
-Chef => Server/Node
-Ansible=> Tower/node
-Salt => Master/ Minion
+
+
 =========================================
 Installation Steps: Puppet Master
 =========================================
