@@ -45,6 +45,8 @@ Function               Resources                     Resources                  
  - Ansible -m ping "node group" (for particular group)
  - Ansible "Node group" -m copy -a "src=test.txt dest=/temp/test.txt" (#Adhoc Commands)
  - Ansible-Playbook "Playbook name"
+ - Ansible-galaxy install "role"
+ - Ansible-galaxy list
 
 
  # Playbook (Can have multiple plays)
@@ -64,7 +66,7 @@ Function               Resources                     Resources                  
 
   - Hosts: nodes
   remote_users: edureka
-  become: yes (#to become Sudo)
+  become: yes
   become_method: sudo
   connection: SSH
   gather_facts: yes
@@ -73,3 +75,14 @@ Function               Resources                     Resources                  
   yum:
   name: telnet
   state: latest
+
+  # Roles
+  ===========================================
+  ---
+  - Hosts: nodes
+    remote_users: edureka
+    become: yes
+    become_method: sudo
+    connection: SSH
+    gather_facts: yes
+    roles: "rolename"
