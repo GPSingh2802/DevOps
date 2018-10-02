@@ -85,4 +85,5 @@ Function               Resources                     Resources                  
     become_method: sudo
     connection: SSH
     gather_facts: yes
-    roles: "rolename"
+    roles:
+     - "rolename"
