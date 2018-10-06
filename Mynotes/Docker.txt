@@ -1,12 +1,18 @@
+
 # Docker
 # Origin from transportation Container
 # Co-relation between transport/shipping Container and IT industry Container
-
-
-
-
-
 # Light weight and do not require any license
+
+# Challenges with Shipping transportation
+ - Which mode of transport to use?
+ - Skilled worker for loading/unloading good
+
+# Solution : Standardisation of goods as Container
+
+
+
+
 
 
 # Docker vs Virtual Machine
