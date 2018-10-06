@@ -36,13 +36,24 @@
 # Docker file -> Docker Images -> Docker Containers
 # Docker hub - Github for Docker Images
 
+# Docker Isolation: NameSpaces and cGroups
+# Volume/Storage is non-persistent or ephemeral
+
 =====================================================================
 # Commands
  - sudo yum install Docker
  - docker help
  - docker version
- - docker Images                  #Available local doc Images
- - docker pull ubuntu             #Getting images from docker hub
- - docker ps                      #running Container
- - docker ps -a                   #running Container in past
- - docker run -it                 #Starting Container
+ - docker Images                       #Available local doc Images
+ - docker search Apache                #Search image in Docker hub
+ - docker pull ubuntu                  #Getting images from docker hub
+ - docker ps(Container ls)             #running Container
+ - docker ps(Container ls)-a           #running Container in past
+ - docker run -itd ubuntu              #Starting Container (interactive, terminal, detached)
+ - docker history ubuntu
+ - docker attach                       #Connecting to Container
+ - exit or (ctrl+P+Q)
+ - docker rm "Container:ID/name"       #Remove Container
+ - docker run -itd -name NAME ubuntu   #Naming Container
+ - docker stop "Container:ID or name"  #Stopping Container
+ - docker start "Container:ID or name" #Starting Container
