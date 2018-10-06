@@ -7,12 +7,25 @@
 # Challenges with Shipping transportation
  - Which mode of transport to use?
  - Skilled worker for loading/unloading good
-
 # Solution : Standardisation of goods as Container
 
+# Challenges with system/software Configuration
+ - Which system should be used for software services
+ - Are employees Skilled/trained enough to handle the software with required Configuration
+# software should work same in Dev, UAT, Prod, Stand-alone, public or Private cloud
 
+# Node is compute machine (Physical, VM, public or Private cloud)
+# Docker - A shipping Container for Node
+ - Developers: Build Once, Run Anywhere
+ - Operations: Configure Once, Run Anywhere
 
-
-
+ # Monolithic vs Micro services Architecture
+  - One big code, changes slow, services tightly coupled, require big servers
+  - Application broken down to small services ( Rapid update)
+  - Small services interact with each other via API (Small Servers and distributed Architecture)
 
 # Docker vs Virtual Machine
+- kernel/OS Level Virtualisation  Hardware Level Virtualisation
+
+# HyperVisors: esx/esxi/hyperV/Xen (Hardware Level Virtualisation)
+# Docker: Virtualisation of Kernel (Process)
