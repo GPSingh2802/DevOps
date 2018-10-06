@@ -1,0 +1,12 @@
+# Docker
+# Origin from transportation Container
+# Co-relation between transport/shipping Container and IT industry Container
+
+
+
+
+
+# Light weight and do not require any license
+
+
+# Docker vs Virtual Machine
