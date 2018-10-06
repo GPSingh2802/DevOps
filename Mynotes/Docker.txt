@@ -57,3 +57,5 @@
  - docker run -itd -name NAME ubuntu   #Naming Container
  - docker stop "Container:ID or name"  #Stopping Container
  - docker start "Container:ID or name" #Starting Container
+ - docker inspect "Image or Container:ID or name"
+              
