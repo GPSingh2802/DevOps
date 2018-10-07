@@ -1,0 +1,49 @@
+
+# Java
+=================================
+# Simple: Easy to learn (Open Source)
+# Portable: Run on any operating system
+# Object Oriented: Everything is dealt as Object
+# Secure: Use "no pointers" and run inside VM sandbox
+# Distributed: Use "Remote Method Invocation" RMI
+# Robust: Garbage collection and Memory allocation
+# Class based: It help create hierarchy, can define classes and inherit classes
+# Concurrent: Parallely write and run codes
+# Low dependencies
+
+# Widely Used
+=================================
+# Develop Android applications
+# Develop Hadoop applications
+# Develop Web applications
+# Develop applications servers
+# Develop BCM tools
+
+# Java Framework
+=================================
+# Hibernate: Let you connect to various objects/databases
+# Spring: Use existing code to crate various customised applications
+# Apache Hadoop
+# Struts
+
+# Why not C++
+=================================
+# C++ does not provide efficient means for garbage collection
+# no build in support for thread
+# Complex for graphic rich applications
+# C++ is not platform independent
+# Memory allocation needs to be done by the developer
+
+# Java Compilation
+=================================
+# ***Java code (.java) -> JavaC compiler -> ByteCode (.Class) -> JVM***
+
+# Java Memory
+=================================
+# Pointers: Points to a Memory that holds some data. Acts as reference
+# Java has no pointers. JVM handles the Memory allocation and de-allocation
+# Heap: Memory area in JVM where various objects created
+# Heap is divided into two sections
+ - Young Space (newly allocated Objects)
+ - Old Space
+# Garbage Collector: Memory freed during runtime by a special thread
