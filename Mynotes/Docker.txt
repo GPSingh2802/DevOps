@@ -39,8 +39,22 @@
 # Docker Isolation: NameSpaces and cGroups
 # Volume/Storage is non-persistent or ephemeral
 
+# Docker Architecture: https://docs.docker.com/engine/docker-overview/
+
+# Docker version
+ - CE: Community Edition
+ - EE: Enterprise Edition
+
+ # Docker File: https://docs.docker.com/engine/reference/builder/
+ 
+
 =====================================================================
 # Commands
+ - # https://get.docker.com/
+ - # This script is meant
+ for quick & easy install via:
+ - #   $ curl -fsSL get.docker.com -o get-docker.sh
+ - #   $ sh get-docker.sh
  - sudo yum install Docker
  - docker help
  - docker version
@@ -59,4 +73,4 @@
  - docker start "Container:ID or name" #Starting Container
  - docker inspect "Image or Container:ID or name"
  - docker info                         #Infomation of docker host
- 
+ - docker Container help               #docker help
