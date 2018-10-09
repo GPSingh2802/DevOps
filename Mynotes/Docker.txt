@@ -81,4 +81,8 @@
  - docker build -t "Image name:Tag" .
  - docker pull
  - docker push
- 
+
+
+=====================================================================
+ # https://www.katacoda.com/courses/docker
+ # https://labs.play-with-docker.com/
