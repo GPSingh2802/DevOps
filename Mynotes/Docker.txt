@@ -68,12 +68,17 @@
  - docker attach                       #Connecting to Container
  - exit or (ctrl+P+Q)
  - docker rm "Container:ID/name"       #Remove Container
+ - docker rmi "Image:tsg"
  - docker run -itd -name NAME ubuntu   #Naming Container
  - docker stop "Container:ID or name"  #Stopping Container
  - docker start "Container:ID or name" #Starting Container
  - docker inspect "Image or Container:ID or name"
  - docker info                         #Infomation of docker host
  - docker Container help               #docker help
-
+ - docker cp "Container:Source path"   #docker copy
  - docker run -itd --name=Name1 -v /home/vagrant/Myapp:/tmp/Myapp (Hostpath:ClientPath)
  - docker run -itd --name=MyApp3 -v /Users/GP/Desktop/MyApp:/tmp ubuntu
+ - docker build -t "Image name:Tag" .
+ - docker pull
+ - docker push
+ 
