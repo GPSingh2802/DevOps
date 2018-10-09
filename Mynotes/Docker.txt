@@ -46,7 +46,7 @@
  - EE: Enterprise Edition
 
  # Docker File: https://docs.docker.com/engine/reference/builder/
- 
+ # Docker demeon/Docker Engine/docker runtime
 
 =====================================================================
 # Commands
@@ -74,3 +74,6 @@
  - docker inspect "Image or Container:ID or name"
  - docker info                         #Infomation of docker host
  - docker Container help               #docker help
+
+ - docker run -itd --name=Name1 -v /home/vagrant/Myapp:/tmp/Myapp (Hostpath:ClientPath)
+ - docker run -itd --name=MyApp3 -v /Users/GP/Desktop/MyApp:/tmp ubuntu
