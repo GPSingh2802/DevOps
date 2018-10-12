@@ -1,0 +1,12 @@
+#SQL vs NoSQL
+==========================
+# SQL - Structured Query Language
+# SQL - Language to query data
+
+# SQL
+# Database Structure - Strict Schemas
+- Tables
+ - Columns (Field)
+ - Rows (Records)
+# All Records have to follow the Schemas
+# Multiple Tables - Relations (1-1, 1-Many, Many- Many)

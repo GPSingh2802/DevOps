@@ -1,0 +1,45 @@
+# ELK Stack - ElasticSearch, Logstash and Kibana
+
+# Need for Log Analysis: How application is performing
+# Issue debugging
+# Predictive Analysis
+# Security Analysis
+# Performance Analysis
+# Debugging
+
+# Logs Analysis - Challenges
+=============================
+# Non-consistent log format
+# Non-consistent time format
+# De-centralised logs
+# Expert knowledge requirement
+
+
+# Logs Analysis: Process of analyzing the Computer/Machine generated data
+# Centralised or distributed
+
+# Process of Logs Analysis
+=============================
+# Collection of data
+# Cleaning of data
+# Convert into structured form (Logs represent in specific format for each application)
+# Analysis of data
+# Obtaining Results
+
+
+# ElasticSearch
+============================
+# Store logs in JSON format
+# Search engine and uses Indexing
+# NoSQL database
+# provide RESTfulAPI
+
+# Logstash
+============================
+# Data pipeline tool
+# Centralised data processing
+# Collects, Parse and Analyse structured/unstructured data and events
+
+# Kibana
+==========================
+# Web interface - Visualization tool
