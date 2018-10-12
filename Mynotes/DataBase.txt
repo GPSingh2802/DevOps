@@ -10,3 +10,15 @@
  - Rows (Records)
 # All Records have to follow the Schemas
 # Multiple Tables - Relations (1-1, 1-Many, Many- Many)
+
+# MongoDB (NoSQL)
+# Database has collections
+# Collections have Documents
+# Documents do not have to follow same Schemas!!
+# Advantage: Flexible database
+# No relations!!
+
+# Horizontal Scaling: Add more Servers (DB to be split-up, not suited for SQL, go for NoSQL)
+# Vertical Scaling: Add power to existing Server (Limit of Vertical Scaling)
+
+# Limitation for lots (thousands) read and write per queries (SQL)
