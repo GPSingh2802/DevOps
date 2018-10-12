@@ -10,6 +10,9 @@
  - Rows (Records)
 # All Records have to follow the Schemas
 # Multiple Tables - Relations (1-1, 1-Many, Many- Many)
+# Horizontal and Vertical Scaling difficult
+# Limitation for lots (thousands) read and write per queries per second (SQL)
+
 
 # MongoDB (NoSQL)
 # Database has collections
@@ -20,5 +23,4 @@
 
 # Horizontal Scaling: Add more Servers (DB to be split-up, not suited for SQL, go for NoSQL)
 # Vertical Scaling: Add power to existing Server (Limit of Vertical Scaling)
-
-# Limitation for lots (thousands) read and write per queries (SQL)
+# Great performance for mass read and write requests
