@@ -48,6 +48,8 @@
  # Docker File: https://docs.docker.com/engine/reference/builder/
  # Docker demeon/Docker Engine/docker runtime
 
+ # Docker Toolbox: Used on non-linux machine. No longer Used
+
 =====================================================================
 # Commands
  - # https://get.docker.com/
