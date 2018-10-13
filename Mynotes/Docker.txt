@@ -49,6 +49,9 @@
  # Docker demeon/Docker Engine/docker runtime
 
  # Docker Toolbox: Used on non-linux machine. No longer Used
+ # Docker Kitematic: GUI for Docker
+ # Docker Compose: Configure and run multiple Containers using YML File
+ 
 
 =====================================================================
 # Commands
