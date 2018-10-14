@@ -46,12 +46,20 @@
  - EE: Enterprise Edition
 
  # Docker File: https://docs.docker.com/engine/reference/builder/
- # Docker demeon/Docker Engine/docker runtime
 
- # Docker Toolbox: Used on non-linux machine. No longer Used
- # Docker Kitematic: GUI for Docker
- # Docker Compose: Configure and run multiple Containers using YML File
- 
+=====================================================================
+ # Docker EcoSystem
+  - Docker Toolbox: Used on non-linux machine. No longer Used
+  - Docker demeon/Docker Engine/docker runtime
+  - Docker Kitematic: GUI for Docker
+  - Docker Compose: Configure and run multiple Containers using YML File
+  - Docker Network: Configured for complete Isolation of Containers
+   - Bridge: Default Network Driver
+   - Host
+   - Overlay
+   - None
+   - MacVlan
+  - Docker Swarm: Cluster of machines, all running docker which provides reliable and Scalable platform to run many Containers
 
 =====================================================================
 # Commands
@@ -86,7 +94,27 @@
  - docker build -t "Image name:Tag" .
  - docker pull
  - docker push
+ - sudo docker network ls
+ - docker network create My-Bridge     #Creating Docker Network
 
+ =====================================================================
+ # Docker Port Mapping
+ - curl localhost
+   curl: (7) Failed to connect to localhost port 80: Connection refused
+
+ - docker run -itd --name=MyWeb -P nginx
+
+ - docker ps
+ - CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                   NAMES
+   df68bfe068ff        nginx               "nginx -g 'daemon of…"   58 seconds ago      Up 57 seconds       0.0.0.0:32768->80/tcp   MyWeb
+
+ - MacBook-Pro:~ GP$ curl localhost:32768
+   <!DOCTYPE html>
+   <html>
+   <head>
+   <title>Welcome to nginx!</title>
+
+- docker run -itd --name=MyWeb1 -p 8181:80 nginx
 
 =====================================================================
  # https://www.katacoda.com/courses/docker
