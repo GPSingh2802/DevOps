@@ -10,4 +10,6 @@
  - Horizontal Scaling
  - Self healing
  - Batch execution
- - 
+ - Storage Orchestration
+
+ 
