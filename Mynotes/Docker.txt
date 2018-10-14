@@ -59,7 +59,27 @@
    - Overlay
    - None
    - MacVlan
-  - Docker Swarm: Cluster of machines, all running docker which provides reliable and Scalable platform to run many Containers
+
+ =====================================================================
+ # Docker Swarm: Cluster of machines, all running docker which provides reliable and Scalable platform to run many Containers
+ # https://docs.docker.com/engine/swarm/
+ # Docker Swarm: Has atleast one node MANAGER (Default Port 2377), Other are node workers
+
+ # MacBook-Pro:~ GP$ docker swarm init --listen-addr 172.17.0.1
+   Swarm initialized: current node (rddco9z4d0zl8s4m9ouv07khy) is now a manager.
+
+   To add a worker to this swarm, run the following command:
+
+   docker swarm join --token SWMTKN-1-4498sdwx95wipext3dut8yym3v1d1wa8kelvprmsvdykib62ir-crqpt9fg67b3pmrlkew364ose 192.168.65.3:2377
+
+   To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+# MacBook-Pro:~ GP$ docker node ls
+  ID                            HOSTNAME                STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+  rddco9z4d0zl8s4m9ouv07khy *   linuxkit-025000000001   Ready               Active              Leader              18.09.0-ce-beta1
+
+
+
 
 =====================================================================
 # Commands
