@@ -16,6 +16,4 @@
   - Master Node: Manages Kubernetes API Server, resource Controller and Scheduler
   - Worker Node: Minions (Physical or Virtual Machine)
   - Pod: Group of Container tightly coupled together
-  -
-
-  
+  - 
