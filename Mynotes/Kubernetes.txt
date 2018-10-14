@@ -1,0 +1,8 @@
+# Kubernetes
+# Container Orchestration
+ - Manage Availability, Scaling and networking of Container
+ - Monitoring the cluster (group of host)
+ - Manage the timing of container creation
+ - Help in container configuration in order to allow container to communicate with one another
+
+ 
