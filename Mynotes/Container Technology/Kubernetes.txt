@@ -5,4 +5,9 @@
  - Manage the timing of container creation
  - Help in container configuration in order to allow container to communicate with one another
 
- 
+# Features
+ - Automatic bin-packaging
+ - Horizontal Scaling
+ - Self healing
+ - Batch execution
+ - 
