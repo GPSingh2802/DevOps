@@ -4,8 +4,8 @@
 # Two Versions: Open Source and Enterprise Version (Cloudbees)
 # Acts like mother board
 
-#
- - Improve Quality: 
+# CI tools Advantage
+ - Improve Quality:
  - Increased Productivity
  - Reduce Risk: Human errors
 
