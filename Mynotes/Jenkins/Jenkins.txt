@@ -4,6 +4,8 @@
 # Two Versions: Open Source and Enterprise Version (Cloudbees)
 # Acts like mother board
 
+# CI Definition (By Martin Fowler): Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.
+
 # CI tools Advantage
  - Improve Quality:
  - Increased Productivity
@@ -25,41 +27,39 @@
  - A: Auditing/Accountability
 
 =================================================
-
-
-
-
-
-3.  Building Jobs/Pipeline
-4.  Jenkins Slaves -
-          1. Resource utilization
-          2. Multiple Platform support
-          3. Parallel Execution
-5.  Parameterized Builds
-6.  Upstream/Downstream project
-7.  Automated ways to trigger a job/Hooks
-8.  A sample Maven build in Jenkins
-9.  Build pipeline plugin/view
-10. Pipeline as code (Jenkinsfile)
-=========================================
-
-=========================================
-
-=========================================
-Jenkins Color codes
+# Building Jobs/Pipeline
+ - Jenkins Color codes
       Blue  - Success
       Red   - Failure
       Grey  - either "not run ever" or "last run was abruptly stopped"
-Job vs Build
+# Job vs Build
   Job   = Pipeline
   Build = each iteration of a Job
 ** Config file in Jenkins (linux): /var/lib/jenkins/config.xml (jenkins.xml)
-=========================================
-Sample Webhook URL:
+
+ =================================================
+# Jenkins Slaves -
+          1. Resource utilization
+          2. Multiple Platform support
+          3. Parallel Execution
+ =================================================
+# Parameterised Builds
+# Upstream/Downstream project
+# Automated ways to trigger a job/Hooks (Build Trigger)
+# Build pipeline plugin/view
+# Pipeline as code (Jenkinsfile)
+
+ =================================================
+# A sample Maven build in J
+  Install Maven in Global Tools configuration
+
+ =================================================
+# Sample Webhook URL:
 curl http://172.28.28.145/job/chef-job/build?token=edureka
 file:///home/myrepos/gitrepo
 repo/.git/hooks/post-commit.sample
 file:///tmp/myrepo
+
 =========================================
 java based projects:
     Maven (POM.XML)
@@ -71,6 +71,7 @@ mvn package
 .Net Project
     MSbuild
     NAnt
+
 =========================================
 #Jenkinsfile Example for Pipeline-as-Code
 =========================================
@@ -95,15 +96,14 @@ pipeline {
   }
 }
 =========================================
-Pipeline-as-Code references:
+# Pipeline-as-Code references:
 https://jenkins.io/doc/pipeline/tour/hello-world/
 https://jenkins.io/doc/book/pipeline-as-code/
 =========================================
-Things to read:
-Edureka Blog:
+# Things to read:
+# Edureka Blog:
 https://www.edureka.co/blog/what-is-jenkins/
 https://www.edureka.co/blog/interview-questions/jenkins-interview-questions/
-CI Definition (By Martin Fowler):
-Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.
+
 Reference: https://martinfowler.com/articles/continuousIntegration.html
 =========================================
