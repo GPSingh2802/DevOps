@@ -16,4 +16,16 @@
   - Master Node: Manages Kubernetes API Server, resource Controller and Scheduler
   - Worker Node: Minions (Physical or Virtual Machine)
   - Pod: Group of Container tightly coupled together
-  - 
+
+ # Kubectl - Command-line tool to manage and deploy application on Kubernetes
+
+  # YAML
+   - Type of Structure - MAP and LIST
+   - MAP: Key Value Pair
+   - LIST: Sequence of Objects
+
+   # Services in Kubernetes
+    - ClusterIP
+    - NodePort
+    - LoadBalancer
+    - Ingress
