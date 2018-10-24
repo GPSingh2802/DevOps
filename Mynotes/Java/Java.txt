@@ -47,3 +47,16 @@
  - Young Space (newly allocated Objects)
  - Old Space
 # Garbage Collector: Memory freed during runtime by a special thread
+
+#Array
+=================================
+# Array: Data Structure that holds sequential values
+# Array always starts from 0 (always n-1)
+# Array hold same type of data type values
+# Multi-dimentional Array
+
+#Function
+=================================
+# Function is piece of Code to be executed
+# Function has group of Statement to be executed
+# Function has a task to perform
