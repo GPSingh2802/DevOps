@@ -1,0 +1,20 @@
+# EC2 & EC2 Instances
+====================================
+- AWS Cloud Compute Services offering
+- Elastic Cloud Compute
+- Provides scalable Computing Capacity
+- EC2 virtual Servers are called as Instances
+
+# EC2 Instance Metadata
+====================================
+- Used for Configuring and Managing running Instance
+- Is data about Instance
+- Includes - Instance id, AMI id, hostname, IP address, role etc.
+
+# Type of EC2 Instances
+===================================
+- General Purpose
+- Compute Optimised
+- Memory Optimised
+- Storage Optimised
+- GPU Instances

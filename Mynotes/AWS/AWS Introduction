@@ -1,0 +1,31 @@
+# What is Cloud Computing?
+=============================
+- On demand computing resources (Networks, Storage, Server, Applications and Services), delivered to you over Internet
+- Vmware - Cloud computing is an approach to computing that leverages the efficient pooling of an on-demand, self-managed, virtual infrastructure.
+
+# Why Cloud Computing?
+=============================
+- It's Everywhere
+- It's Powerful
+- It makes your life easier
+
+# Expectation from an AWS Associate Architect
+==============================
+- Designing and deploying scalable, highly available and fault tolerant systems on AWS
+
+# AWS global infrastructure
+==============================
+- 15 Regions - Geographical
+- Availability Zones - separate Datacenter
+- Edge locations - CDN end point (AWS Cloud Front)
+  - pay for for data transfer and requests that you actually use
+  - Can be used till certain limit (users, BW, Storage)
+  - Post the limit separate Region is to be choose
+
+# Choose right Region
+==============================
+- Service Availability
+- Latency
+- User/Customer locations
+- Security and Compliance requirement
+- Pricing
