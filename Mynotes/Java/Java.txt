@@ -8,7 +8,7 @@
 # Distributed: Use "Remote Method Invocation" RMI
 # Robust: Garbage collection and Memory allocation
 # Class based: It help create hierarchy, can define classes and inherit classes
-# Concurrent: Parallely write and run codes
+# Concurrent: Parallel write and run codes
 # Low dependencies
 
 # Widely Used
@@ -53,10 +53,42 @@
 # Array: Data Structure that holds sequential values
 # Array always starts from 0 (always n-1)
 # Array hold same type of data type values
-# Multi-dimentional Array
+# Multi-Dimensional Array
+
+# int X[] = new int[12];
+# char C[][] = new char[6][6];
 
 #Function
 =================================
 # Function is piece of Code to be executed
 # Function has group of Statement to be executed
 # Function has a task to perform
+
+# Scope Specifier Modifier Return-type Function-name (arguments)
+# Public           Static   Void Say     Hello (Int a, int b)
+
+- Scope: Public, Private, protected or default (Package)
+- Modifier: Final, Static, native, synchronized
+- Return-Type: Primitive data or objects
+
+#Function Calling
+=================================
+- Call by values
+- Call by reference
+
+# Function Overloading
+
+# Object Oriented Programming Language
+=================================
+
+
+
+
+
+
+
+
+
+
+
+.
