@@ -13,8 +13,35 @@
 
 # Type of EC2 Instances
 ===================================
-- General Purpose
-- Compute Optimised
-- Memory Optimised
-- Storage Optimised
-- GPU Instances
+- General Purpose : Running Small and Md-size databases, data processing tasks that require additional memory for running backend Servers
+- Compute Optimised : Used for distributed Cache, in-memory analytics, large deployment of SAP, SharePoint and other enterprise Applications
+- Storage Optimised : Large scale DataWare House
+- memory Optimised : In-memory database, processing engine like Spark
+- GPU Instances : 3D Application streaming, machine learning, Video encoding
+
+# EC2 Purchase Options
+===================================
+- On-demand (For Specific period of time)
+- Reserved (For long period of time)
+- Spot (Need instance only once, hourly rates, no upfront commitment, cost lower than on-demand)
+
+# AMI Amazon Machine Image
+====================================
+ - It is image of a server including an OS and often additional Software
+ - PreConfigured templates for the creation of Virtual Server (EC2 Instances)
+ - Users can select an AMI provided by AWS, user community, or through the AWS MarketPlace
+
+# Security Groups
+====================================
+- Act as an Virtual Firewall
+
+- Public Key + Private Key = Key pair
+- AWS EC2 uses Public and Private key cryptography to encrypt and decrypt login information
+
+# Tenancy - Shared and Dedicated
+====================================
+
+# Elastic IP and Elastic Network Interface
+=====================================
+- Network Interface is the point of interconnection between a Machine and a Private or Public Network
+- An Elastic Network Interface (ENI) is a virtual network Interface that you can attach to multiple instances in a VPC
