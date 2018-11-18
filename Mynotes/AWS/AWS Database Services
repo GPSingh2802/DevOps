@@ -1,0 +1,43 @@
+# AWS Database Services
+===============================
+- AWS RDS (including AWS Aurora) [Manage Relational DB and handle structured & Tabular data]
+- AWS DynamoDB [NoSQL Database, to handle unstructured data]
+- AWS RedShift [Data Warehouse, for data analysis and reporting]
+- AWS ElastiCache [In-memory Cache, to improve the performance of Web Application]
+
+# AWS RDS
+===============================
+- Web Services to setup, operate and Scale a relational database Services in the Cloud
+- It handles patching, backup and replication
+- pay only for what you consume
+
+- Advantage
+ - Easy to Administer
+ - Scale up and down
+ - available and durable
+ - Fast
+ - Secure
+ - Inexpensive
+
+ - AWS RDS activity initiated runs only in your current default Region
+ - AWS RDS provides high availability and failover support for DB instances using Multi- availability Zone deployments
+
+ - AWS Aurora is MySQL compatible, deliver upto 5 times the performance of MySQL
+
+ # AWS DynamoDB
+ =================================
+ - Fully managed, NoSQL database Service
+ - Advantage
+  - Fast and Consistent performance
+  - Highly scalable
+  - Fully managed
+  - Event driven Programming
+  - Fine-grained access Control
+  - Flexible
+
+# AWS RedShift
+===================================
+- Faster: Through massively parallel Processing (MPP)
+- Low Cost: No upfront costs, no ongoing hardware or Software maintainance cost
+- Scalable: Responds instantly to change in performance or capacity requirement
+- Secure:

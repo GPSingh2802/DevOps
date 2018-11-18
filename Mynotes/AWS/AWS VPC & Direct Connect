@@ -1,0 +1,31 @@
+# Virtual Private Cloud (VPC)
+================================
+- Enables one to launch AWS resources into a defined virtual Network and give complete control over the Network
+- It is logically isolated from other virtual Network in the AWS Cloud
+- AWS creates a Default VPC for your account
+- Non-Default VPC
+ a. Does not receive public IP address by default unless specified
+ b. Instance receive static Private IP address from the address range of your VPC
+ c. DNS names disabled
+ d. The Instance cannot access the Internet
+ e. The VPC may have an Internet gateway, depending on how it was created
+
+# Security Group with VPC
+===============================
+- Virtual Firewall
+- Act at Instance level, not the subnet level
+- Up to 500 Security groups per VPC
+- Can specify all rules, but not deny rules
+
+# VPC Components
+=================================
+- IP addressing
+- Public and Private Subnets
+- Route Table
+- Access Control List (ACLs)
+- NAT Instance and gateway
+- VPC Peering
+- Internet and Virtual gateway
+
+# AWS Direct Connect
+=================================
