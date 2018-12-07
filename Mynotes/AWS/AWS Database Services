@@ -54,3 +54,12 @@
  - Fast Restore encryption
 
  - Architecture: AWS RedShift Architecture jpg
+
+ # AWS ElastiCache
+ ========================================
+ - Web Service to help improve the performance of Web Applications
+ - Help to setup, manage and scale a distributed in-memory cache envoirnment in the Cloud
+ - Support two open-source in-memory engines
+  - Redis
+  - MemCached
+  
