@@ -1,0 +1,63 @@
+# AWS Elastic Load Balancing and Auto Scaling
+==============================================
+- Load balancer automatically distribute incoming application traffic across multiple target, such as EC2 instances
+- EC2 instances can be collected in one AZ or spanned across multiple AZs
+- It monitors the health of registered targets and routes traffic to only healthy targets
+
+# Components of Load balancers
+==============================================
+- Sticky Session: Bind user to specific Instance for a Session
+- Connection draining: Ensure that the LB stops sending traffic to instances that are de-registered or unhealthy, while keeping the existing connection Components
+ a. Max timeout value can be set between 1 to 36000 seconds (default: 300 seconds)
+ b. Max time limit is reached, LB forcibly closes connection to unhealthy instance
+- Fault Tolerant: Auto Scaling can detect when an instance is unhealthy, terminate it, and launch an instance to replace it
+- monitoring: Collecting the data about the performance of the resources and present it as metrics using CloudWatch
+
+# Type of ELB
+===============================================
+- Classic Load Balancing: Route traffic based on Network level information
+- Application Load Balancing: Route traffic based on Application level information
+
+# Auto Scaling
+===============================================
+- Auto Scaling ensures the correct number AWS EC2 of instances are available to handle the load for your application
+- Collection of EC2 instances called as Auto Scaling groups
+  a. Minimum Size, desired Capacity, Maximum Size
+
+# Auto Scaling Benefits
+================================================
+- Fault Tolerant and high availability Architecture
+- Reusable Instance templates, Automated provisioning and Adjustable Capacity
+
+# Life Cycle of Auto Scaling
+================================================
+- Scale Out: Auto Scaling group launches the required number of EC2 instances, using its assigned launch configuration
+  * LifeCycle Hook: Enables to perform custom actions as Auto Scaling launches an instance (install or configure Software on newly launched instance)
+  * By default, the instance remains in Pending:wait state for an hour before moving to Pending:Proceed
+
+- Scale In: Used to decrease the size of the group
+  * With help of LifeCycle hook, you can download the log files from an Instance before it is terminated (Scale In)
+  * By default, the instance remains in Terminate:wait state for an hour before moving to Terminate:Proceed
+
+  * Termination policy helps the auto Scaling to decide which instance it should terminate first during scale in.
+  * Auto Scaling has default termination policy and also allow to create custom stages
+  * Oldest Instance, Newest Instance, Oldest Launch configuration
+
+  * Instance Protection controls weather auto scaling can terminate a particular instance or not
+  * Instance Protection starts as soon as the instance is INService and , if the Instance is detached, it loses it's instance Protection
+
+- StandBy: Instance continue to be managed by Auto Scaling group however they are not an active part of an application
+
+- Detaching: Instances detached from Auto Scaling group. After which it can be managed separately or attach to different Auto Scaling groups
+
+# Auto Scaling Components and Policies
+==================================================
+- Groups: EC2 instances are organised into groups so that it is a logical unit for the purpose of scaling and Management
+  * Minimum, Maximum and desired number of Instances can be specified
+  * Auto Scaling group maintains the number of instances by performing periodic health checks on the instances in the group
+
+- Launch configuration: Group uses Launch configuration as a template for it's EC2 instances
+- Scaling Plan - Type: Fixed, Manual, Dynamic and Scheduled
+- scaling Plan - Policy:
+  * More than one Scaling Policy can be attached to a group
+  
