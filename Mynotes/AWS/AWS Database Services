@@ -35,9 +35,22 @@
   - Fine-grained access Control
   - Flexible
 
-# AWS RedShift
+# AWS RedShift (Data Warehouseing)
 ===================================
 - Faster: Through massively parallel Processing (MPP)
 - Low Cost: No upfront costs, no ongoing hardware or Software maintainance cost
 - Scalable: Responds instantly to change in performance or capacity requirement
-- Secure:
+- Secure: Uses Industry-standard encryption to keep data secure both in transit and at rest and support SSL.
+
+- It is enterprise-class relational database query and management system
+- Fully managed, petabyte-scale data Warehouse Service
+
+- Features
+ - Optimized for Data Warehouseing
+ - No up-front cost
+ - Fully managed
+ - Fault Tolerant
+ - Automated backup
+ - Fast Restore encryption
+
+ - Architecture: AWS RedShift Architecture jpg
