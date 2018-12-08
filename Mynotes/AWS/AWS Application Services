@@ -1,0 +1,24 @@
+# AWS Application Service
+==================================
+- AWS Provides variety of managed Services to use with your application
+ a. AWS SES: Reliable, Cost-effective email platform
+ b. AWS SNS: Fully managed and highly scalable push messaging
+ c. AWS SQS: Fast, Reliable, Scalable, fully managed message Queuing Service
+
+ # AWS Lambda
+ ===============================
+- Serverless Computing Service
+ a. Compute Service: Run arbitrary code without managing Servers
+ b. Event Driven: Code only when it needs to run
+ c. Pay only for compute time you consume
+
+-Benefits
+ a. No server to manage
+ b. Continues Scaling
+ c. Sub-second billing (every 100ms)
+
+ # AWS Elastic Beanstalk
+ ================================
+- With AWS Elastic Beanstalk, we can quickly deploy and manage application in AWS Cloud without worrying about the infrastructure
+- Reduce manageability
+- Automatically handles capacity, load balancing, Scaling and application health monitoring

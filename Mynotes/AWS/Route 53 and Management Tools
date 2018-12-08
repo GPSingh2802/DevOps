@@ -39,7 +39,5 @@ c. Health Checking
  d. template (Json or YAML) -> CloudFormation (FrameWork) -> Stack (Configured AWS Service)
 
  - Trusty Advisor: Resource Optimization tool
-  a. Inspects an AWS environment and make recommendation for saving money, improving system performance, reliablity, or closing security Gaps
+  a. Inspects an AWS environment and make recommendation for saving money, improving system performance, reliability, or closing security Gaps
   b. Provide real time guidance: Cost Optimization, Performance, security and Fault tolerance
-
-  
