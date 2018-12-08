@@ -1,0 +1,45 @@
+# Route 53 and Management Tools
+========================================
+- Features:
+a. High Availability DNS
+b. Weighted Round Robin
+c. Alias Record: Map the root of your hosted Zone to ELB
+d. Latency based routing
+
+- Functions:
+a. Domain Registration
+b. DNS Service
+c. Health Checking
+
+ # Management tools of AWS
+ ========================================
+ - CloudTrail: Governance and Compliance tool (collect logs)
+ a. Provides a log for all requests for AWS Resources
+ b. Capture information about every API call to every AWS Resource
+ c. no additional charges
+ d. Create SNS topic (optional)
+ e. deliver logs files to AWS S3 bucket specified
+ f. Trail can be created by CloudTrail Console, AWS CLI or CloudTrail API
+ g. Trail is Configuration that enables logging
+ h. Trail: applies to all region or to one region (Can create multiple trails per region
+ i. Monitor CloudTrail log files in real time by sending them to CloudWatch
+ j. Share log files between accounts
+
+ - CloudWatch: Monitoring and Performance tool (Analyze logs to identify actual error)
+ a. Monitor AWS Resources and the application you run on AWS in real-time
+ b. CloudWatch alarms, send notifications or automatically make changes to the Resources based on defined rules
+ c. Monitor AWS EC2, other AWS Resources, custom metrics, Monitor and Store logs, SetAlarms, view Graphs&Statistics, Monitor and react to Resource changes
+ d. alarms can be created to send SNS
+ e. alarms state: Ok, Alarm and Insufficient_data (within, outside threshold)
+
+ - CloudFormation: Infrastructure provisioning and Configuration tool (template of the process followed to solve the problem)
+ a. Service to setup AWS Resource
+ b. enables you to create and manage AWS Infrastructure deployments predictably and repeatedly
+ c. No additional charges
+ d. template (Json or YAML) -> CloudFormation (FrameWork) -> Stack (Configured AWS Service)
+
+ - Trusty Advisor: Resource Optimization tool
+  a. Inspects an AWS environment and make recommendation for saving money, improving system performance, reliablity, or closing security Gaps
+  b. Provide real time guidance: Cost Optimization, Performance, security and Fault tolerance
+
+  
