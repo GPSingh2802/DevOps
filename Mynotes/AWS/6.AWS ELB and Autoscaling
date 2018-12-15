@@ -11,7 +11,7 @@
  a. Max timeout value can be set between 1 to 36000 seconds (default: 300 seconds)
  b. Max time limit is reached, LB forcibly closes connection to unhealthy instance
 - Fault Tolerant: Auto Scaling can detect when an instance is unhealthy, terminate it, and launch an instance to replace it
-- monitoring: Collecting the data about the performance of the resources and present it as metrics using CloudWatch
+- Monitoring: Collecting the data about the performance of the resources and present it as metrics using CloudWatch
 
 # Type of ELB
 ===============================================
@@ -60,4 +60,3 @@
 - Scaling Plan - Type: Fixed, Manual, Dynamic and Scheduled
 - scaling Plan - Policy:
   * More than one Scaling Policy can be attached to a group
-  
