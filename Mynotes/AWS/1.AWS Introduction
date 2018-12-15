@@ -18,7 +18,7 @@
 - 15 Regions - Geographical
 - Availability Zones - separate Datacenter
 - Edge locations - CDN end point (AWS Cloud Front)
-  - pay for for data transfer and requests that you actually use
+  - pay for data transfer and requests that you actually use
   - Can be used till certain limit (users, BW, Storage)
   - Post the limit separate Region is to be choose
 
