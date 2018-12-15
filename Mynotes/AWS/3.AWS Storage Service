@@ -58,7 +58,7 @@
 # EBS Features
 ================================
 ** EBS volume can be attached to any running instance that is in same availability Zone
-** Even after terminating EC2 insatnce, EBS volume is not deleted
+** Even after terminating EC2 instance, EBS volume is not deleted
 ** All the instance support EBS encryption
 ** For simplified data encryption, EBS Volume can be launched as encrypted volumes
 
@@ -76,9 +76,9 @@
  - Each Object can Contain up to 5 TB of data
 
  - Bucket used to store Objects, which consist of data and Metadata
- - Bucker can be configured and created in any Specific Region
+ - buckets can be configured and created in any Specific Region
  - When an Object is added to the bucket, Amazon S3 generates a unique Version ID and assign it to the object
- - By default on 100 buckets can be created in AWS.
+ - By default 100 buckets can be created in on AWS.
 
  - AWS S3 Access Control line: Bucket permission Specifies who is allowed the access to the object in the bucket and what particular permission have been granted
  - Bucket Policies
@@ -124,4 +124,3 @@
  ==================================
  - Petabyte-Scale data transport Solution
  - Help in moving large amount of data in and out of AWS using portable storage devices for transport
- 
