@@ -62,6 +62,20 @@
 ** All the instance support EBS encryption
 ** For simplified data encryption, EBS Volume can be launched as encrypted volumes
 
+** You cannot change the CMK (Customer Management Key) that is associated with an existing snapshot or encrypted volume
+** However, you can associate a different CMK during a snapshot copy operation so that the resulting copied snapshot uses the new CMK
+   [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_key_mgmt]
+
+** Amazon EBS encryption offers a simple encryption solution for your EBS volumes without the need to build, maintain, and secure your own key management infrastructure. When you create an encrypted EBS volume and attach it to a supported instance type, the following types of data are encrypted:
+  - Data at rest inside the volume
+  - All data moving between the volume and the instance
+  - All snapshots created from the volume
+  - All volumes created from those snapshots
+   [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_key_mgmt]
+
+** You cannot enable encryption for an existing EBS volume
+  [https://aws.amazon.com/blogs/aws/protect-your-data-with-new-ebs-encryption/]
+
 # Type of EBS volume
 ================================
 - Provisioned IOPS (20k IOPS, 320 MiB/sec)

@@ -31,6 +31,12 @@
  - PreConfigured templates for the creation of Virtual Server (EC2 Instances)
  - Users can select an AMI provided by AWS, user community, or through the AWS MarketPlace
 
+ ** When you launch the AMI, an EBS volume is created from each snapshot. Because EBS already supports encryption of data volumes, you can now create a single AMI with a fully-encrypted set of volumes
+    [https://aws.amazon.com/blogs/aws/new-encrypted-ebs-boot-volumes/]
+
+ ** AMIs that are backed by Amazon EBS snapshots can take advantage of Amazon EBS encryption. Snapshots of both data and root volumes can be encrypted and attached to an AMI
+    [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html]
+    
 # Security Groups
 ====================================
 - Act as an Virtual Firewall

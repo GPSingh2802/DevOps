@@ -13,7 +13,9 @@ c. Health Checking
 
  # Management tools of AWS
  ========================================
+
  - CloudTrail: Governance and Compliance tool (collect logs)
+ ====================================================================================
  a. Provides a log for all requests for AWS Resources
  b. Capture information about every API call to every AWS Resource
  c. no additional charges
@@ -25,14 +27,46 @@ c. Health Checking
  i. Monitor CloudTrail log files in real time by sending them to CloudWatch
  j. Share log files between accounts
 
+ ** A trail is a configuration that enables delivery of CloudTrail events to an Amazon S3 bucket, CloudWatch Logs, and
+    CloudWatch Events.
+    [https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html]
+
+ ** A trail that applies to all regions has the following advantages:
+    - The configuration settings for the trail apply consistently across all regions.
+    - You receive CloudTrail events from all regions in a single S3 bucket and, optionally, in a CloudWatch Logs log group.
+    - You manage trail configuration for all regions from one location.
+    - You immediately receive events from a new region. When a new region is launched, CloudTrail automatically creates a trail for you in the new region with the same settings as your original trail.
+    - You can create trails in regions that you don't use often to monitor for unusual activity.
+
+ ** By default, the log files delivered by CloudTrail to your bucket are encrypted by Amazon server-side encryption with Amazon
+    S3-managed encryption keys (SSE-S3). To provide a security layer that is directly manageable, you can instead use
+    -side encryption with AWS KMS–managed keys (SSE-KMS) for your CloudTrail log files
+    [https://docs.aws.amazon.com/awscloudtrail/latest/userguide/encrypting-cloudtrail-log-files-with-aws-kms.html]
+
  - CloudWatch: Monitoring and Performance tool (Analyze logs to identify actual error)
+ ======================================================================================
  a. Monitor AWS Resources and the application you run on AWS in real-time
  b. CloudWatch alarms, send notifications or automatically make changes to the Resources based on defined rules
  c. Monitor AWS EC2, other AWS Resources, custom metrics, Monitor and Store logs, SetAlarms, view Graphs&Statistics, Monitor and react to Resource changes
  d. alarms can be created to send SNS
  e. alarms state: Ok, Alarm and Insufficient_data (within, outside threshold)
 
+
+ ** The CloudWatch home page automatically displays metrics about every AWS service you use. You can additionally create custom dashboards to display metrics about your custom applications,
+    and display custom collections of metrics that you choose. You can create alarms which watch metrics and send notifications or automatically make changes to the resources you are
+    monitoring when a threshold is breached
+    [https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html]
+
+ ** You can create a CloudWatch alarm that watches a single CloudWatch metric or the result of a math expression based
+    on CloudWatch metrics. The alarm performs one or more actions based on the value of the metric or expression relative
+    to a threshold over a number of time periods. The action can be an Amazon EC2 action, an Amazon EC2 Auto Scaling
+    action, or a notification sent to an Amazon SNS topic.
+    [https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html]
+
+
+
  - CloudFormation: Infrastructure provisioning and Configuration tool (template of the process followed to solve the problem)
+==========================================================================================
  a. Service to setup AWS Resource
  b. enables you to create and manage AWS Infrastructure deployments predictably and repeatedly
  c. No additional charges

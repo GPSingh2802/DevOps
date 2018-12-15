@@ -10,6 +10,21 @@
  d. The Instance cannot access the Internet
  e. The VPC may have an Internet gateway, depending on how it was created
 
+ ** A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between
+    them using private IPv4 addresses or IPv6 addresses. Instances in either VPC can communicate with each other as
+    if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC
+    in another AWS account. The VPCs can be in different regions (also known as an inter-region VPC peering connection).
+    [https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html]
+
+ ** Full Mesh VPC peering
+    [https://docs.aws.amazon.com/vpc/latest/peering/peering-configurations-full-access.html#many-vpcs-full-access]
+
+ ** Unsupported VPC Peering
+    - Overlapping CIDR Blocks
+    - Transitive Peering
+    - Edge to Edge Routing Through a Gateway or Private Connection
+    [https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html]
+
 # Security Group with VPC
 ===============================
 - Virtual Firewall
@@ -26,6 +41,25 @@
 - NAT Instance and gateway
 - VPC Peering
 - Internet and Virtual gateway
+
+# NAT Gateway
+===============================
+- You can use a network address translation (NAT) gateway to enable instances in a private subnet to connect to the
+  internet or other AWS services, but prevent the internet from initiating a connection with those instances
+  [https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html]
+
+- Creating NAT Gateway:
+** To create a NAT gateway, you must specify a subnet and an Elastic IP address. Ensure that the Elastic IP address is
+   currently not associated with an instance or a network interface.
+** After you've created your NAT gateway, you must update your route tables for your private subnets to point internet traffic
+   to the NAT gateway.
+
+** A NAT gateway cannot send traffic over VPC endpoints, VPN connections, AWS Direct Connect, or VPC peering connections
+
+- Controlling the Use of NAT Gateways:
+** By default, IAM users do not have permission to work with NAT gateways. You can create an IAM user policy that grants users
+   permissions to create, describe, and delete NAT gateways. We currently do not support resource-level permissions for any of
+   the ec2:*NatGateway* API operations
 
 # AWS Direct Connect
 =================================
