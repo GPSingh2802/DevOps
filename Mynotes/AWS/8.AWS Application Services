@@ -22,3 +22,24 @@
 - With AWS Elastic Beanstalk, we can quickly deploy and manage application in AWS Cloud without worrying about the infrastructure
 - Reduce manageability
 - Automatically handles capacity, load balancing, Scaling and application health monitoring
+
+# Elastic Container Services (ECS)
+==================================
+- Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast, container management service that makes it easy to run, stop,
+  and manage Docker containers on a cluster.
+ [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html]
+
+- A task definition is required to run Docker containers in Amazon ECS.
+  [https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html]
+
+- You can monitor your Amazon ECS resources using Amazon CloudWatch.
+- Docker provides several diagnostic tools that help you troubleshoot problems with your containers and tasks
+
+- Amazon EC2 Container Service (ECS) now supports the Application Load Balancer for the Elastic Load Balancing (ELB) service.
+  [https://aws.amazon.com/about-aws/whats-new/2016/08/amazon-ec2-container-service-now-integrated-with-application-load-balancer-to-support-dynamic-ports-and-path-based-routing/]
+
+# AWS API Gateway
+==================================
+- Amazon API Gateway is an AWS service that enables developers to create, publish, maintain, monitor, and secure APIs at any scale.
+  You can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud.
+  [https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html]

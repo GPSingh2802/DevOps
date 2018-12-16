@@ -71,7 +71,7 @@
   - All data moving between the volume and the instance
   - All snapshots created from the volume
   - All volumes created from those snapshots
-   [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_key_mgmt]
+  [https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_key_mgmt]
 
 ** You cannot enable encryption for an existing EBS volume
   [https://aws.amazon.com/blogs/aws/protect-your-data-with-new-ebs-encryption/]
@@ -96,6 +96,12 @@
 
  - AWS S3 Access Control line: Bucket permission Specifies who is allowed the access to the object in the bucket and what particular permission have been granted
  - Bucket Policies
+
+ - CORS: Cross-Origin Resource Sharing
+   [https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html]
+
+ - Hosting Static Website on S3
+   [https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html]
 
  # Type of S3 storage
  ================================

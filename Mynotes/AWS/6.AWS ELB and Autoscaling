@@ -13,10 +13,41 @@
 - Fault Tolerant: Auto Scaling can detect when an instance is unhealthy, terminate it, and launch an instance to replace it
 - Monitoring: Collecting the data about the performance of the resources and present it as metrics using CloudWatch
 
+
+** Elastic Load Balancing provides access logs that capture detailed information about requests sent to your load
+   balancer. Each log contains information such as the time the request was received, the client's IP address,
+   latencies, request paths, and server responses.
+** Access logging is an optional feature of Elastic Load Balancing that is disabled by default. After you enable access
+   logging for your load balancer, Elastic Load Balancing captures the logs and stores them in the Amazon S3 bucket
+   that you specify.
+** There is no additional charge for access logs.
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/access-log-collection.html]
+
+
 # Type of ELB
 ===============================================
 - Classic Load Balancing: Route traffic based on Network level information
 - Application Load Balancing: Route traffic based on Application level information
+  [https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html]
+
+** Internal LB
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-internal-load-balancers.html?icmpid=docs_elb_console]
+
+** Health Check - Classic LB
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html]
+
+** Register or De-register instances for Classic LB
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-deregister-register-instances.html]
+
+** Configure Cross-Zone Load Balancing for Your Classic Load Balancer
+   With cross-zone load balancing, each load balancer node for your Classic Load Balancer distributes requests evenly
+   across the registered instances in all enabled Availability Zones.
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/enable-disable-crosszone-lb.html]
+
+** You can enable or disable the Availability Zones for your load balancer at any time. After you enable an Availability
+   Zone, the load balancer starts routing requests to the registered targets in that Availability Zone. Your load
+   balancer is most effective if you ensure that each enabled Availability Zone has at least one registered target.
+   [https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-subnets.html]
 
 # Auto Scaling
 ===============================================
@@ -31,6 +62,9 @@
 
 # Life Cycle of Auto Scaling
 ================================================
+- LifeCycle hook
+ [https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html]
+
 - Scale Out: Auto Scaling group launches the required number of EC2 instances, using its assigned launch configuration
   * LifeCycle Hook: Enables to perform custom actions as Auto Scaling launches an instance (install or configure Software on newly launched instance)
   * By default, the instance remains in Pending:wait state for an hour before moving to Pending:Proceed
@@ -50,6 +84,12 @@
 
 - Detaching: Instances detached from Auto Scaling group. After which it can be managed separately or attach to different Auto Scaling groups
 
+- Suspending and Resuming Scaling Processes
+ [https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html]
+
+- Elastic Load Balancing Health Checks with Auto Scaling
+  [https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-elb-healthcheck.html]
+
 # Auto Scaling Components and Policies
 ==================================================
 - Groups: EC2 instances are organised into groups so that it is a logical unit for the purpose of scaling and Management
@@ -60,3 +100,6 @@
 - Scaling Plan - Type: Fixed, Manual, Dynamic and Scheduled
 - scaling Plan - Policy:
   * More than one Scaling Policy can be attached to a group
+
+- Auto Scaling Instance Termination
+ [https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-termination.html]
