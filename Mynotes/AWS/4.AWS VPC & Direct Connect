@@ -25,6 +25,12 @@
     - Edge to Edge Routing Through a Gateway or Private Connection
     [https://docs.aws.amazon.com/vpc/latest/peering/invalid-peering-configurations.html]
 
+ ** Secondary CIDR range in VPC
+   [https://aws.amazon.com/about-aws/whats-new/2017/08/amazon-virtual-private-cloud-vpc-now-allows-customers-to-expand-their-existing-vpcs/]
+
+ ** Flow logs
+    [https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html#flow-logs-basics]
+
 # Security Group with VPC
 ===============================
 - Virtual Firewall
@@ -72,6 +78,8 @@
   your route tables contain a local route for each IPv4 CIDR block. If you've associated an IPv6 CIDR block with your VPC, your route
   tables contain a local route for the IPv6 CIDR block. You cannot modify or delete these routes.
   [https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTa%20bles]
+
+
 
 
 # VPC endpoints
