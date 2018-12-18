@@ -31,6 +31,7 @@
 - Act at Instance level, not the subnet level
 - Up to 500 Security groups per VPC
 - Can specify all rules, but not deny rules
+- Stateful
 
 # VPC Components
 =================================
@@ -55,11 +56,33 @@
    to the NAT gateway.
 
 ** A NAT gateway cannot send traffic over VPC endpoints, VPN connections, AWS Direct Connect, or VPC peering connections
+   [https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-%20gateway-basics]
 
 - Controlling the Use of NAT Gateways:
 ** By default, IAM users do not have permission to work with NAT gateways. You can create an IAM user policy that grants users
    permissions to create, describe, and delete NAT gateways. We currently do not support resource-level permissions for any of
    the ec2:*NatGateway* API operations
+
+- Comparison of NAT Instances and NAT Gateways
+  [https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html]
+
+# Route tables
+===================================
+- Every route table contains a local route for communication within the VPC over IPv4. If your VPC has more than one IPv4 CIDR block,
+  your route tables contain a local route for each IPv4 CIDR block. If you've associated an IPv6 CIDR block with your VPC, your route
+  tables contain a local route for the IPv6 CIDR block. You cannot modify or delete these routes.
+  [https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html#RouteTa%20bles]
+
+
+# VPC endpoints
+====================================
+- A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by
+  PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances
+  in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC
+  and the other service does not leave the Amazon network.
+  [https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html]
+
+** endpoints are supported in same region only
 
 # AWS Direct Connect
 =================================

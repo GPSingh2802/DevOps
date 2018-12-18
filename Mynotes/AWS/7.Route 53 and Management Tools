@@ -11,6 +11,9 @@ a. Domain Registration
 b. DNS Service
 c. Health Checking
 
+ - DNS hostname
+   [https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html]
+
  # Management tools of AWS
  ========================================
 
